@@ -81,7 +81,7 @@ class PrivateTagsApiTests(TestCase):
         res = self.client.post(TAGS_URL, payload)
 
         self.assertEqual(res.status_code, status.HTTP_400_BAD_REQUEST)
-    
+
     def test_retrieve_tags_assigned_to_recipes(self):
         """Test filtering tags by those assigned to recipes"""
         tag1 = Tag.objects.create(user=self.user, name='Breakfast')
